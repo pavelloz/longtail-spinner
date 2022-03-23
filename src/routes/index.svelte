@@ -5,7 +5,7 @@
     let one, two, three
     let collection = []
 
-    const getWords = (s) => s.value.split(",").map(trim).map(uslug) || []
+    const getWords = (s) => s.value.split(",").map(uslug) || []
 
     const Spin = () => {
         const oneWords = getWords(one)
