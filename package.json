@@ -1,0 +1,25 @@
+{
+  "name": "sveltekit-tailwindcss-template",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "NODE_ENV=production svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "next",
+    "@sveltejs/kit": "next",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.4",
+    "cssnano": "^5.1.4",
+    "postcss": "^8.4.12",
+    "svelte": "^3.46.4",
+    "svelte-preprocess": "^4.10.4",
+    "tailwindcss": "^3.0.23"
+  },
+  "type": "module"
+}
