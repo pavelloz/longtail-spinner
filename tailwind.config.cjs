@@ -1,9 +1,5 @@
 const config = {
-    content: ["./src/**/*.{html,js,svelte,ts}"],
-    theme: {
-        extend: {},
-    },
-    plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+    content: ["./src/**/*.{html,svelte}"],
 }
 
 module.exports = config

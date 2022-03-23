@@ -116,7 +116,7 @@
             <div class="grid grid-cols-3 space-x-10">
                 <label for="one">
                     <textarea
-                        class="w-full h-24 resize-none border-slate-300 border"
+                        class="w-full h-24 p-2 resize-none border-slate-300 border"
                         type="text"
                         name="wordOne"
                         id="one"
@@ -126,7 +126,7 @@
                 </label>
                 <label for="two">
                     <textarea
-                        class="w-full h-24 resize-none border-slate-300 border"
+                        class="w-full h-24 p-2 resize-none border-slate-300 border"
                         type="text"
                         name="wordTwo"
                         id="two"
@@ -136,7 +136,7 @@
                 </label>
                 <label for="three">
                     <textarea
-                        class="w-full h-24 resize-none border-slate-300 border"
+                        class="w-full h-24 p-2 resize-none border-slate-300 border"
                         type="text"
                         name="wordThree"
                         id="three"
