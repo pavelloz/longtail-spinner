@@ -1,380 +1,89 @@
+<script>
+    const threeDefault = "diesel,electric,ethanol,fuelcell,hybrid,hydrogen,naturalgas,plugin"
+
+    import uslug from "uslug"
+    import combinate from "combinate"
+    // console.clear()
+    let one, two, three
+    let collection = []
+
+    const getWords = (s) => s.value.split(",").map(uslug) || []
+
+    const Spin = () => {
+        const oneWords = getWords(one)
+        const twoWords = getWords(two)
+        const threeWords = getWords(three)
+
+        collection = combinate({ oneWords, twoWords, threeWords }).map(
+            (o) => `${o.oneWords}-${o.twoWords}-${o.threeWords}`
+        )
+    }
+</script>
+
 <div class="antialiased text-gray-900 px-6">
-    <div class="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
-      <div class="py-8">
-        <h1 class="text-4xl font-bold">@tailwindcss/forms examples</h1>
-        <p class="mt-2 text-lg text-gray-600">
-          An opinionated form reset designed to make form elements easy to style with utility
-          classes.
-        </p>
-        <div class="mt-4 flex space-x-4">
-          <a class="text-lg underline" href="https://github.com/tailwindlabs/tailwindcss-forms"
-            >Documentation</a
-          >
-          <a class="text-lg underline" href="/kitchen-sink.html">Kitchen Sink</a>
-        </div>
-      </div>
-      <div class="py-12">
-        <h2 class="text-2xl font-bold">Unstyled</h2>
-        <p class="mt-2 text-lg text-gray-600">This is how form elements look out of the box.</p>
-        <div class="mt-8 max-w-md">
-          <div class="grid grid-cols-1 gap-6">
-            <label class="block">
-              <span class="text-gray-700">Full name</span>
-              <input type="text" class="mt-1 block w-full" placeholder="" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Email address</span>
-              <input type="email" class="mt-1 block w-full" placeholder="john@example.com" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">When is your event?</span>
-              <input type="date" class="mt-1 block w-full" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">What type of event is it?</span>
-              <select class="block w-full mt-1">
-                <option>Corporate event</option>
-                <option>Wedding</option>
-                <option>Birthday</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Additional details</span>
-              <textarea class="mt-1 block w-full" rows="3"></textarea>
-            </label>
-            <div class="block">
-              <div class="mt-2">
-                <div>
-                  <label class="inline-flex items-center">
-                    <input type="checkbox" checked />
-                    <span class="ml-2">Email me news and special offers</span>
-                  </label>
-                </div>
-              </div>
+
+
+
+    <div class="mx-auto py-12 md:max-w-full">
+        <header class="mb-10">
+          <a href="https://documenation.platformos.com" class="inline-block m-auto sm:m-0">
+            <svg fill="none" viewBox="0 0 204 37" height="37" width="204" xmlns="http://www.w3.org/2000/svg"><g clip-rule="evenodd" fill-rule="evenodd"><g fill="#0a0c0b"><path d="m156.2 5-1.7 1.6-1.6-1.5h-3.7l-2 2.4-2.3-2.4v15.6h4.6V10h2.1l.7 1v9.7h4.6l-.5-.5.5.5v-9.6l.7-1.1h1.5l.5 1v9.7h4.8v-12l-3.6-3.6zM53.6 14.4 51.9 16h-5V9.9h5l1.7 1.8zm-3.2-9.2H47l-2.4 2.3-2.4-2.3V26H47v-5.4h6.8l4.1-3.5V9.4l-4.1-4.3zM91.4 14.8v-4.1h5V6h-5L89 3.5l-2.5-2.3v16l4.7 3.4h6V16h-4zM79.1 16h-4.9l-1.7-1.7v-2.6l1.7-1.5h4.9zm0-10.4h-6.7l-4.2 3.5v7.5l4.2 4.2H79l2.4-2.2 2.4 2.2V10.2L81.5 8zM134.6 5.5 132.2 8l-2.5-2.5v15.2h4.8V10.2h5l3 3V7.9l-3.2-2.4zM99.6 3.8v17h4.7V15h5v-4.6h-5V6.4l2-1.5h4V.3h-6zM62.8 2.8 60.4.2v20.4H65V5.3zM123 14.2 121 16H118l-1.8-1.8v-2.5l1.8-1.5h3.2l1.8 1.5zm-7-8.7L111.7 9v7.4l4.3 4.2h7l4.3-4.2V9l-4.2-3.5h-7zM178.6 10.3V14l-1.6 2.4h-3.5l-1.7-2.4V6.5l1.7-2.3h3.5l1.6 2.3zm-7-10.2-4.4 4.1v12.3l4.4 4h7l4.5-4V4.2L178.7 0zM198.2 8.4H192L190.6 7V5.5l1.2-1.4h4l2.5 2.2 3.8-2.1-4.5-4.1h-7l-4.5 4v5l4 3.2h5.7l1.6 1.2V15l-1.6 1.5h-3.5l-2.5-2.2-3.8 2.1 4.5 4.1h7l4.5-4v-5zM74.3 35.4H78c3 0 5.2-2 5.2-4.8s-2.1-5-5.2-5h-3.7zm3.7-8.2c2 0 3.4 1.4 3.4 3.4 0 1.9-1.4 3.3-3.4 3.3h-2v-6.7zm12 8.4a5 5 0 0 0 5-5c0-2.8-2-5-5-5s-5.2 2.2-5.2 5c0 2.7 2.1 5 5.1 5zm0-1.6c-2 0-3.4-1.5-3.4-3.4 0-2 1.4-3.5 3.3-3.5 2 0 3.4 1.6 3.4 3.5S91.9 34 90 34zm11.7 1.6a5 5 0 0 0 4-1.7l-1.2-1.1c-.8.7-1.6 1.2-2.8 1.2-1.9 0-3.2-1.5-3.2-3.4 0-2 1.4-3.5 3.2-3.5 1.1 0 2 .5 2.8 1.2l1-1.3a5 5 0 0 0-3.8-1.5 5 5 0 0 0-5 5 5 5 0 0 0 5 5.1zm9.7 0c2.6 0 4.2-1.5 4.2-4.4v-5.5H114v5.6c0 1.8-1 2.7-2.4 2.7-1.6 0-2.5-1-2.5-2.8v-5.5h-1.7v5.6c0 2.8 1.6 4.3 4.1 4.3zm6.6-.2h1.7v-7l3 4.6h.1l3-4.6v7h1.8v-9.7h-1.8l-3 4.6-3-4.6H118zm12.1 0h7.3V34h-5.6v-2.6h5v-1.5h-5v-2.6h5.6v-1.5H130zm9.4 0h1.7v-6.9l5.3 7h1.5v-9.8h-1.7v6.7l-5.2-6.7h-1.6zm13.4 0h1.7v-8.1h3.1v-1.6h-8v1.6h3.2zm4.5 0h1.8l1-2.3h4.6l1 2.3h1.8l-4.3-9.8h-1.6zm3.4-3.8 1.7-4 1.7 4zm9.7 3.8h1.7v-8.1h3v-1.6h-7.8v1.6h3zm6.7 0h1.7v-9.7h-1.7zm9 .2a5 5 0 0 0 5.1-5c0-2.8-2-5-5-5s-5.2 2.2-5.2 5c0 2.7 2.1 5 5.1 5zm0-1.6c-2 0-3.3-1.5-3.3-3.4 0-2 1.4-3.5 3.3-3.5s3.3 1.6 3.3 3.5-1.3 3.4-3.3 3.4zm7.2 1.4h1.7v-6.9l5.4 7h1.4v-9.8h-1.7v6.7l-5.2-6.7h-1.6z"></path></g><path d="M5.6-.2h2.8L4 4.4z" fill="#5ab147"></path><path d="M2.4 12 0 7.6h2.3z" fill="#c5243e"></path><path d="M2.4 7.7H7L2.4 12z" fill="#d6256b"></path><path d="M7 15.6 7 7.7 2.4 12z" fill="#e87a2c"></path><path d="m12.7 11.7-5.8 4 .2-8z" fill="#fac924"></path><path d="m16.1 6.5-9 1.2 5.4 4z" fill="#5ab147"></path><path d="m14.1-.2-3.7 4.5 5.7 2.2z" fill="#c5243e"></path><path d="M22.7-.2H14l2.1 6.6z" fill="#4a80b5"></path><path d="m7.1 7.7 9.1-1.2-5.8-2.2z" fill="#d6256b"></path><path d="M24.3 6.5H16l6.5-6.6z" fill="#23487c"></path><path d="m20.2 13.8-7.5-2.1L16 6.4z" fill="#419846"></path><path d="m24.3 6.5-4 7.3-4-7.3z" fill="#024c3d"></path><path d="m27.2 11.7-7 2 4.1-7.3z" fill="#419846"></path><path d="m25.8 16-5.6-2.2 7-2z" fill="#5ab147"></path><path d="M22.7-.2 28.9 5l-4.6 1.5z" fill="#4a80b5"></path><path d="M24.3 6.5 28.9 5 27 11.7z" fill="#038c47"></path><path d="m27.2 11.7 6.3 1.2-7.6 3z" fill="#024c3d"></path><path d="M33.5 13v6l-7.7-3z" fill="#419846"></path><path d="m25.8 16 7.7 3-5.8 1z" fill="#23487c"></path><path d="m33.6 19-3 6.6-2.9-5.6z" fill="#5ab147"></path><path d="m27.7 20 2.9 5.6-4.4-2.5z" fill="#4a80b5"></path><path d="m30.6 25.6-4.3 2.7v-5.2z" fill="#23487c"></path><path d="M26.3 23.1v5.2L24.3 25z" fill="#4a80b5"></path><path d="M26.4 28.3h-5.8l3.6-3.4z" fill="#23487c"></path><path d="m24.2 25-3.6 3.4.7-3.4z" fill="#c5243e"></path><path d="m21.2 25-.6 3.4-2.8-3.4z" fill="#d6256b"></path><path d="M21.2 25h-3.4l2-2.3z" fill="#c5243e"></path><path d="M17.9 25v-4.4l2 2z" fill="#e87a2c"></path><path d="m29 5 4.5 8-6.3-1.3z" fill="#5ab147"></path><path d="m21.2 20.7-.4-2.3 3.4 1.5z" fill="#419846"></path><path d="m17.9 20.6 3.4.1-.5-2.3z" fill="#5ab147"></path><path d="m19.8 22.7 1.4-2-3.4-.1z" fill="#fac924"></path><path d="m8 2.8 2.4 1.5-.1-3z" fill="#419846"></path><path d="m8 2.8 2.3-1.5L8.5-.2z" fill="#5ab147"></path><path d="M4 4.4 8.5-.2l-.5 3z" fill="#038c47"></path><path d="M10.4 4.3 8 2.8 6.8 4.4z" fill="#024c3d"></path><path d="m4 4.4 4-1.7-1.3 1.6z" fill="#419846"></path><path d="m2.4 7.7 4.4-3.3.4 3.3z" fill="#e87a2c"></path><path d="m6.7 4.4.4 3.3 3.3-3.5z" fill="#c5243e"></path><path d="M2.4 7.7 4 4.4h2.7z" fill="#fac924"></path><path d="M13 15.6 11.7 18h4z" fill="#419846"></path><path d="m10 15.6 1.7 2.3 1.3-2.3z" fill="#5ab147"></path><path d="m12.7 11.7.4 4 7.2-2z" fill="#024c3d"></path><path d="m15.6 18 4.6-4.2-7 1.9z" fill="#038c47"></path></g></svg>
+          </a>
+          <h1 class="text-3xl text-slate-600">Longtail generator</h1>
+        </header>
+
+        <div>
+            <h3>Words</h3>
+            <div class="grid grid-cols-3 space-x-10">
+                <label for="one">
+                    <textarea
+                        class="w-full h-24"
+                        type="text"
+                        name="wordOne"
+                        id="one"
+                        bind:this={one}
+                        >Honda,Acura,Isuzu,Mazda,Mitsubishi,Nissan,Datsun,Infiniti,Subaru,Suzuki,Daihatsu,Lexus,Scion</textarea
+                    >
+                </label>
+                <label for="two">
+                    <textarea
+                        class="w-full h-24"
+                        type="text"
+                        name="wordTwo"
+                        id="two"
+                        bind:this={two}
+                        >convertible,coupe,crossover,hatchback,minivans,pickuptrucks,sedan,stationwagon,suv,Vans</textarea
+                    >
+                </label>
+                <label for="three">
+                    <textarea
+                        class="w-full h-24"
+                        type="text"
+                        name="wordThree"
+                        id="three"
+                        bind:this={three}
+                        >diesel,electric,ethanol,fuelcell,hybrid,hydrogen,naturalgas,plugin</textarea
+                    >
+                </label>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="py-12">
-        <h2 class="text-2xl font-bold">Simple</h2>
-        <div class="mt-8 max-w-md">
-          <div class="grid grid-cols-1 gap-6">
-            <label class="block">
-              <span class="text-gray-700">Full name</span>
-              <input
-                type="text"
-                class="
-                  mt-1
-                  block
-                  w-full
-                  rounded-md
-                  border-gray-300
-                  shadow-sm
-                  focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                "
-                placeholder=""
-              />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Email address</span>
-              <input
-                type="email"
-                class="
-                  mt-1
-                  block
-                  w-full
-                  rounded-md
-                  border-gray-300
-                  shadow-sm
-                  focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                "
-                placeholder="john@example.com"
-              />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">When is your event?</span>
-              <input
-                type="date"
-                class="
-                  mt-1
-                  block
-                  w-full
-                  rounded-md
-                  border-gray-300
-                  shadow-sm
-                  focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                "
-              />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">What type of event is it?</span>
-              <select
-                class="
-                  block
-                  w-full
-                  mt-1
-                  rounded-md
-                  border-gray-300
-                  shadow-sm
-                  focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                "
-              >
-                <option>Corporate event</option>
-                <option>Wedding</option>
-                <option>Birthday</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Additional details</span>
-              <textarea
-                class="
-                  mt-1
-                  block
-                  w-full
-                  rounded-md
-                  border-gray-300
-                  shadow-sm
-                  focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                "
-                rows="3"
-              ></textarea>
-            </label>
-            <div class="block">
-              <div class="mt-2">
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="
-                        rounded
-                        border-gray-300
-                        text-indigo-600
-                        shadow-sm
-                        focus:border-indigo-300
-                        focus:ring
-                        focus:ring-offset-0
-                        focus:ring-indigo-200
-                        focus:ring-opacity-50
-                      "
-                      checked
-                    />
-                    <span class="ml-2">Email me news and special offers</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
+
+        <div>
+            <button class="bg-blue-700 text-white rounded px-2 py-1 my-5" on:click={Spin}
+                >Generate</button
+            >
         </div>
-      </div>
-      <div class="py-12">
-        <h2 class="text-2xl font-bold">Underline</h2>
-        <div class="mt-8 max-w-md">
-          <div class="grid grid-cols-1 gap-6">
-            <label class="block">
-              <span class="text-gray-700">Full name</span>
-              <input
-                type="text"
-                class="
-                  mt-0
-                  block
-                  w-full
-                  px-0.5
-                  border-0 border-b-2 border-gray-200
-                  focus:ring-0 focus:border-black
-                "
-                placeholder=""
-              />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Email address</span>
-              <input
-                type="email"
-                class="
-                  mt-0
-                  block
-                  w-full
-                  px-0.5
-                  border-0 border-b-2 border-gray-200
-                  focus:ring-0 focus:border-black
-                "
-                placeholder="john@example.com"
-              />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">When is your event?</span>
-              <input
-                type="date"
-                class="
-                  mt-0
-                  block
-                  w-full
-                  px-0.5
-                  border-0 border-b-2 border-gray-200
-                  focus:ring-0 focus:border-black
-                "
-              />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">What type of event is it?</span>
-              <select
-                class="
-                  block
-                  w-full
-                  mt-0
-                  px-0.5
-                  border-0 border-b-2 border-gray-200
-                  focus:ring-0 focus:border-black
-                "
-              >
-                <option>Corporate event</option>
-                <option>Wedding</option>
-                <option>Birthday</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Additional details</span>
-              <textarea
-                class="
-                  mt-0
-                  block
-                  w-full
-                  px-0.5
-                  border-0 border-b-2 border-gray-200
-                  focus:ring-0 focus:border-black
-                "
-                rows="2"
-              ></textarea>
-            </label>
-            <div class="block">
-              <div class="mt-2">
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="
-                        border-gray-300 border-2
-                        text-black
-                        focus:border-gray-300 focus:ring-black
-                      "
-                    />
-                    <span class="ml-2">Email me news and special offers</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
+
+        <div>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                {#each collection as item}
+                    <li>
+                        <a href="/#{item}" class="underline text-blue-700 hover:text-slate-700"
+                            >{item}</a
+                        >
+                    </li>
+                {/each}
+            </ul>
         </div>
-      </div>
-      <div class="py-12">
-        <h2 class="text-2xl font-bold">Solid</h2>
-        <div class="mt-8 max-w-md">
-          <div class="grid grid-cols-1 gap-6">
-            <label class="block">
-              <span class="text-gray-700">Full name</span>
-              <input
-                type="text"
-                class="
-                  mt-1
-                  block
-                  w-full
-                  rounded-md
-                  bg-gray-100
-                  border-transparent
-                  focus:border-gray-500 focus:bg-white focus:ring-0
-                "
-                placeholder=""
-              />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Email address</span>
-              <input
-                type="email"
-                class="
-                  mt-1
-                  block
-                  w-full
-                  rounded-md
-                  bg-gray-100
-                  border-transparent
-                  focus:border-gray-500 focus:bg-white focus:ring-0
-                "
-                placeholder="john@example.com"
-              />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">When is your event?</span>
-              <input
-                type="date"
-                class="
-                  mt-1
-                  block
-                  w-full
-                  rounded-md
-                  bg-gray-100
-                  border-transparent
-                  focus:border-gray-500 focus:bg-white focus:ring-0
-                "
-              />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">What type of event is it?</span>
-              <select
-                class="
-                  block
-                  w-full
-                  mt-1
-                  rounded-md
-                  bg-gray-100
-                  border-transparent
-                  focus:border-gray-500 focus:bg-white focus:ring-0
-                "
-              >
-                <option>Corporate event</option>
-                <option>Wedding</option>
-                <option>Birthday</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Additional details</span>
-              <textarea
-                class="
-                  mt-1
-                  block
-                  w-full
-                  rounded-md
-                  bg-gray-100
-                  border-transparent
-                  focus:border-gray-500 focus:bg-white focus:ring-0
-                "
-                rows="3"
-              ></textarea>
-            </label>
-            <div class="block">
-              <div class="mt-2">
-                <div>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="checkbox"
-                      class="
-                        rounded
-                        bg-gray-200
-                        border-transparent
-                        focus:border-transparent focus:bg-gray-200
-                        text-gray-700
-                        focus:ring-1 focus:ring-offset-2 focus:ring-gray-500
-                      "
-                    />
-                    <span class="ml-2">Email me news and special offers</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
+</div>

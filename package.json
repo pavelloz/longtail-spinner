@@ -2,7 +2,7 @@
   "name": "sveltekit-tailwindcss-template",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "start": "svelte-kit dev",
     "build": "NODE_ENV=production svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
@@ -21,5 +21,9 @@
     "svelte-preprocess": "^4.10.4",
     "tailwindcss": "^3.0.23"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "combinate": "^1.1.9",
+    "uslug": "^1.0.4"
+  }
 }
