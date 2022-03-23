@@ -5,7 +5,7 @@
     let one, two, three
     let collection = []
 
-    const getWords = (s) => s.value.split(",").map(uslug).map(x => x.toLowerCase()) || []
+    const getWords = (s) => s.value.split(",").map(uslug) || []
 
     const Spin = () => {
         const oneWords = getWords(one)
@@ -131,7 +131,7 @@
                         name="wordTwo"
                         id="two"
                         bind:this={two}
-                        >convertible,coupe,crossover,hatchback,minivan,pickup trucks,sedan,stationwagon,suv,van</textarea
+                        >convertible,coupe,crossover,hatchback,minivans,pickup trucks,sedan,stationwagon,suv,vans</textarea
                     >
                 </label>
                 <label for="three">
