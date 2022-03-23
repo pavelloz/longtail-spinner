@@ -12,10 +12,7 @@ const config = {
         adapter: adapter({
             fallback: "index.html",
         }),
-        inlineStyleThreshold: 102400,
-        prerender: {
-            default: true
-        }
+        inlineStyleThreshold: 102400
     },
 }
 
