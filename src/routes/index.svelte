@@ -20,7 +20,7 @@
 
 <div class="antialiased text-gray-900 p-8">
     <header class="mb-10 flex">
-        <a rel="external" target="_blank" href="https://documentaion.platformos.com" class="inline-block m-auto sm:m-0">
+        <a rel="external" target="_blank" href="https://documentation.platformos.com" class="inline-block m-auto sm:m-0">
             <svg
                 fill="none"
                 viewBox="0 0 204 37"
