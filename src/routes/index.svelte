@@ -111,7 +111,7 @@
 
     <div class="md:max-w-full flex-grow">
         <div>
-            <h3 class="text-xl text-slate-600 mb-3">Terms to combine (comma separated)</h3>
+            <h3 class="text-xl text-slate-600 mb-3">Terms to combine (comma separated, no line breaks)</h3>
             <p class="text-base text-slate-600 mb-5">Paste your own sets of terms below to generate combinations</p>
             <div class="grid grid-cols-3 space-x-10">
                 <label for="one">
