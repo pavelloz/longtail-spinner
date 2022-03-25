@@ -1,0 +1,27 @@
+{
+    "cars": [
+        "Honda,Acura,Isuzu,Mazda,Mitsubishi,Nissan,Datsun,Infiniti,Subaru,Suzuki,Daihatsu,Lexus,Scion",
+        "convertible,coupe,crossover,hatchback,mini vans,pickup trucks,sedan,station wagon,suv,vans",
+        "diesel,electric,ethanol,fuel cell,hybrid,hydrogen,natural gas,plugin"
+    ],
+    "desksnearme": [
+        "spare desk,rent a desk,office space,available office,rent a meeting room,lease a workspace,rent desk space",
+        "New York City,Los Angeles,Chicago,Houston,Phoenix,San Antonio,Philadelphia,San Diego,Dallas,Austin,San Jose,Fort Worth,Jacksonville,Charlotte,Columbus,Indianapolis,San Francisco,Seattle,Denver,Washington,Boston,El Paso,Nashville,Oklahoma City,Las Vegas,Portland,Detroit,Memphis,Louisville,Milwaukee",
+        "for a day,for an hour,by the hour,per minutes,on demand,today"
+    ],
+    "fitness": [
+        "Aqua,Ballet,Barre,Cardiovascular Training,Cycling,Dance,Education & Workshops,Flexibility & Mobility,General Fitness,Jump Rope,Kickboxing,Life Coaching,Martial Arts,Meditation,Nutrition & Wellness,Coaching,Personal Training,Pilates,Pre/post-natal,Senior & Active Aging,Sports and Athletic,Training,Strength Training,Yoga,Zumba",
+        "New York City,Los Angeles,Chicago,Houston,Phoenix,San Antonio,Philadelphia,San Diego,Dallas,Austin,San Jose,Fort Worth,Jacksonville,Charlotte,Columbus,Indianapolis,San Francisco,Seattle,Denver,Washington,Boston,El Paso,Nashville,Oklahoma City,Las Vegas,Portland,Detroit,Memphis,Louisville,Milwaukee",
+        "for everybody,for beginners,for intermediate,for advanced"
+    ],
+    "kiwido": [
+        "best,cheap,urgent,honest,reliable,quick,dependable,organized,qualified,flexible,polite",
+        "Handyperson,Building,IT Help,Carpet & furniture cleaning,House Washing,Car Cleaning,Locksmith,Roofing,Tiling,Plumbing,Electrical,Gardening,Cleaning,Painting,Moving,Concreting,Brick & Block Laying,Architect & Drafting,Landscaping,Interior Design,Gib Fixing & Plastering",
+        "New York City,Los Angeles,Chicago,Houston,Phoenix,San Antonio,Philadelphia,San Diego,Dallas,Austin,San Jose,Fort Worth,Jacksonville,Charlotte,Columbus,Indianapolis,San Francisco,Seattle,Denver,Washington,Boston,El Paso,Nashville,Oklahoma City,Las Vegas,Portland,Detroit,Memphis,Louisville,Milwaukee"
+    ],
+    "custom": [
+      "platformOS",
+      "is",
+      "the best"
+    ]
+}
