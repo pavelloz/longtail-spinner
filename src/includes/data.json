@@ -1,4 +1,9 @@
 {
+  "custom": [
+    "platformOS",
+    "is,always will be",
+    "performant,reliable,flexible,secure,scalable"
+  ],
     "cars": [
         "Honda,Acura,Isuzu,Mazda,Mitsubishi,Nissan,Datsun,Infiniti,Subaru,Suzuki,Daihatsu,Lexus,Scion",
         "convertible,coupe,crossover,hatchback,mini vans,pickup trucks,sedan,station wagon,suv,vans",
@@ -18,10 +23,5 @@
         "best,cheap,urgent,honest,reliable,quick,dependable,organized,qualified,flexible,polite",
         "Handyperson,Building,IT Help,Carpet & furniture cleaning,House Washing,Car Cleaning,Locksmith,Roofing,Tiling,Plumbing,Electrical,Gardening,Cleaning,Painting,Moving,Concreting,Brick & Block Laying,Architect & Drafting,Landscaping,Interior Design,Gib Fixing & Plastering",
         "New York City,Los Angeles,Chicago,Houston,Phoenix,San Antonio,Philadelphia,San Diego,Dallas,Austin,San Jose,Fort Worth,Jacksonville,Charlotte,Columbus,Indianapolis,San Francisco,Seattle,Denver,Washington,Boston,El Paso,Nashville,Oklahoma City,Las Vegas,Portland,Detroit,Memphis,Louisville,Milwaukee"
-    ],
-    "custom": [
-      "platformOS",
-      "is",
-      "the best"
     ]
 }

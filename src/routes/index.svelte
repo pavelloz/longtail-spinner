@@ -12,7 +12,7 @@
 
     let collection = []
     let delimiter = "-"
-    let selectedSet = "cars"
+    let selectedSet = "custom"
 
     onMount(async () => {
         currentSet.update((n) => sets[selectedSet])
